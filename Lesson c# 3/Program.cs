@@ -34,23 +34,52 @@
 // 78 -> 2
 // 89126 -> 5
 
+// System.Console.WriteLine("Введите число");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// int GetCountNumbers(int newNum)
+// {
+//     int count = 0;
+     
+//     while(newNum> 0)
+//     {
+//         newNum/=10;
+//     // newNum = newNum/10;
+//         count++;
+//     }
+//     return count;
+// }
+
+// int result= GetSum();
+// System.Console.WriteLine(result);
+
+// Console.WriteLine(GetCountNumbers(num));
+
+
+// Задача 28: Напишите программу, которая принимает
+//  на вход число N и выдаёт произведение чисел от 1 до N.
+// 4 -> 24 
+// 5 -> 120
+
 System.Console.WriteLine("Введите число");
 int num = Convert.ToInt32(Console.ReadLine());
 
-int GetCountNumbers(int newNum)
+int GetSum()
 {
-    int count = 0;
+    int start = 1;
+    int multiplication = 1;
      
-    while(newNum> 0)
+    while(start<= num)
     {
-        newNum/=10;
-    // newNum = newNum/10;
-        count++;
+        multiplication *= start;
+     // Multiplication = Multiplication +start;
+        start++;
+        
     }
-    return count;
+    return multiplication;
 }
 
 // int result= GetSum();
 // System.Console.WriteLine(result);
 
-Console.WriteLine(GetCountNumbers(num));
+Console.WriteLine(GetSum());
