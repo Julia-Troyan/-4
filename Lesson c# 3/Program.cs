@@ -6,24 +6,51 @@
 
 // тип возвращающего значения + Название + () + {}
 
-Console.WriteLine("Введите число");
+// Console.WriteLine("Введите число");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// int GetSum()
+// {
+//     int start = 1;
+//     int sum=0;
+     
+//     while(start<= num)
+//     {
+//         sum += start;
+//      // sum = sum +start;
+//         start++;
+//     }
+//     return sum;
+// }
+
+// int result= GetSum();
+// System.Console.WriteLine(result);
+
+// System.Console.WriteLine(GetSum());
+
+// Задача 26: Напишите программу, которая принимает
+//  на вход число и выдаёт количество цифр в числе.
+// 456 -> 3
+// 78 -> 2
+// 89126 -> 5
+
+System.Console.WriteLine("Введите число");
 int num = Convert.ToInt32(Console.ReadLine());
 
-int GetSum()
+int GetCountNumbers(int newNum)
 {
-    int start = 1;
-    int sum=0;
+    int count = 0;
      
-    while(start<= num)
+    while(newNum> 0)
     {
-        sum += start;
-     // sum = sum +start;
-        start++;
+        newNum/=10;
+    // newNum = newNum/10;
+        count++;
     }
-    return sum;
+    return count;
 }
 
 // int result= GetSum();
 // System.Console.WriteLine(result);
 
-System.Console.WriteLine(GetSum());
+Console.WriteLine(GetCountNumbers(num));
