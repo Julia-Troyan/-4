@@ -61,25 +61,43 @@
 // 4 -> 24 
 // 5 -> 120
 
-System.Console.WriteLine("Введите число");
-int num = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Введите число");
+// int num = Convert.ToInt32(Console.ReadLine());
 
-int GetSum()
-{
-    int start = 1;
-    int multiplication = 1;
+// int GetSum()
+// {
+//     int start = 1;
+//     int multiplication = 1;
      
-    while(start<= num)
-    {
-        multiplication *= start;
+//     while(start<= num)
+//     {
+//         multiplication *= start;
      // Multiplication = Multiplication +start;
-        start++;
+//         start++;
         
-    }
-    return multiplication;
-}
+//     }
+//     return multiplication;
+// }
 
 // int result= GetSum();
 // System.Console.WriteLine(result);
 
-Console.WriteLine(GetSum());
+// Console.WriteLine(GetSum());
+
+// Задача 30: Напишите программу, которая выводит 
+// массив из 8 элементов, заполненный нулями и 
+// единицами в случайном порядке.
+// [1,0,1,1,0,1,0,0]
+
+CreateArray();
+
+void CreateArray()
+{
+    int[] array = new int[8];
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(0,2);
+        System.Console.Write(array[i]+ " "); 
+    }
+}
